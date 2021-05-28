@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Meta tags-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Meta tags PWA-->
+  <!--esta etiqueta tendra el color de la parte de arriba del dispositivo-->
+  <meta name="theme-color" content="#333333" />
+  <!--para que se vea bien en mobiles, en lo ancho de la pantalla-->
+  <meta name="MobileOptimized" content="width" />
+  <!--para que se puede usar de manera touch-->
+  <meta name="HandheldFriendly" content="true" />
+    
+  <!--en IOS se tiene que activar esas opciones, poder manipular y cambiar la confiuracion que por defecto es no-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!--en IOS me permitira cambiar el estilo
+  dafault, black-translucent -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<!---Icons-->
+
+<link rel="shortcut icon" href="./favicon.png" type="image/png" />
+<!--Imagen que aparecera en dispositivos IOS-->
+<link rel="apple-touch-icon" href="./favicon.png" type="image/png" />
+<!--activara la pantalla de splash para que se centra en dispositivos IOS-->
+<link rel="apple-touch-startup-image" href="./favicon.png" type="image/png" />
+
+<!--manifest-->
+<!--es el que configura el nombre que aperece en el app al instalarla, la version, ruta principal, configurar nombres largos
+para instalar el nombre que aperece en dispositivos-->
+<link rel="manifest" href="./manifest.json" />
+
+  <!--Tittle-->
+  <title>Proyecto</title>
+  
+  <!--Scripts-->
+  <script
+  crossorigin
+  src="https://unpkg.com/react@17/umd/react.production.min.js"
+  ></script>
+  <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+      ></script>
+      
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      
+      <!--Styles-->
+      <link rel="stylesheet" href="./style.css">
+    </head>
+</head>
+<body>
+
+    <div id="root"></div>
+    <script type="text/babel" src="./components/Contador.js"></script>
+    <!-- <script type="text/babel" src="./index.js"></script> -->
+    <script type="text/babel">
+      ReactDOM.render(<Contador />, document.getElementById("root"));
+    </script>
+
+    <!-- ServiceWorker -->
+
+    <script src="./register.js"></script>
+    <!--Configuracion importantes funcionan cone ste archivo, NOmbre del app, iconos, lo que dire en la pantalla de splash, pantalla etc-->
+    <!--Metadata que nesecita nuestro index-->
+    
+</body>
+</html>
